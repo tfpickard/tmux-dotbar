@@ -32,6 +32,7 @@ window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" '• 
 maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-expanded-icon" '󰊓 ')
 show_maximized_icon_for_all_tabs=$(get_tmux_option "@tmux-dotbar-show-maximized-icon-for-all-tabs" false)
 
+# TODO: add an option to set the status-right
 
 tmux set-option -g status-position "$status"
 tmux set-option -g status-style "bg=${bg},fg=${fg}"
