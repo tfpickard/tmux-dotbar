@@ -16,10 +16,14 @@ The session name is changed when the prefix key is pressed. <br>
 <p align="center">
 <div align="center">
 
-![preview](./preview.png) 
+![preview](./imgs/preview.png) 
 
 </div>
 </p>
+
+## Features
+* Color indication when tmux prefix is pressed: ![prefix-preview](./imgs/prefix-preview.png) 
+* Icon indicator when a pane is maximized in a window
 
 ## Installation
 ### TPM (Recommended)
