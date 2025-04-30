@@ -2,7 +2,8 @@
 
 <h1> Tmux dotbar </h1>
 
-Tmux dotbar is status bar theme for tmux <br>
+Tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
+The session name is changed when the prefix key is pressed. <br>
 
 <br>
 
@@ -41,4 +42,14 @@ Tmux dotbar is status bar theme for tmux <br>
    `run ~/.config/tmux/plugins/tmux-dotbar/dotbar.tmux`.
 3. Reload Tmux by either restarting or reloading with `tmux source ~/.tmux.conf`.
 
+## Recommended tmux options
+Since this theme does not show the index of the windows, it's recommended for users that doesn't use a lot of windows.  
+A good option is to set index numbers to start at 1, as it's easier to know which index refers to each window.
+As well to renumber the windows when some of them are closed.
+
+```
+set -g base-index 1
+setw -g pane-base-index 1
+set-option -g renumber-windows on
+```
 
