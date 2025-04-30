@@ -20,7 +20,7 @@ tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
 * Color indication when tmux prefix is pressed
 
 ## Installation
-### TPM (Recommended)
+### TPM (recommended)
 1.  Install [TPM](https://github.com/tmux-plugins/tpm)
 2.  Add the plugin:
 
@@ -50,7 +50,7 @@ tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
 ### Colorscheme
 This theme works best depending on the colorscheme you use, because the status-bar background is supposed to mix with the terminal background.
 The default colorscheme used for this theme (as in the preview images) is [neovim-ayu](https://github.com/Shatur/neovim-ayu), so it matches the background for my tmux, terminal and vim colors.  
-If you want to match your colorscheme (recommended), you can get the colors from the theme palette and change/set these options:
+It's **strongely recommended** to change the colors so it matches your colorscheme. You can get the colors from the theme palette and change/set these options:
 ```
 # supposing you use catppuccin moccha
 set -g @tmux-dotbar-bg "#1e1e2e"
