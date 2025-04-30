@@ -1,9 +1,8 @@
 <div align="center">
 
-<h1> Tmux dotbar </h1>
+<h1> tmux dotbar </h1>
 
-Tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
-The session name is changed when the prefix key is pressed. <br>
+tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
 
 <br>
 
@@ -14,16 +13,16 @@ The session name is changed when the prefix key is pressed. <br>
 
 ## Preview
 <p align="center">
-<div align="center">
-
-![preview](./imgs/preview.png) 
-
-</div>
+  <div align="center">
+    <img src="./imgs/preview.png" width="800" />
+    <img src="./imgs/prefix-preview.png" width="800" />
+  </div>
 </p>
 
+
 ## Features
-* Color indication when tmux prefix is pressed: ![prefix-preview](./imgs/prefix-preview.png) 
 * Icon indicator when a pane is maximized in a window
+* Color indication when tmux prefix is pressed
 
 ## Installation
 ### TPM (Recommended)
