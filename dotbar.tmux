@@ -14,8 +14,8 @@ get_tmux_option() {
   echo "$default_value"
 }
 
+# colors
 bg=$(get_tmux_option "@tmux-dotbar-bg" '#0B0E14')
-
 fg=$(get_tmux_option "@tmux-dotbar-fg" '#475266')
 fg_current=$(get_tmux_option "@tmux-dotbar-fg-current" '#BFBDB6')
 fg_session=$(get_tmux_option "@tmux-dotbar-fg-session" '#565B66')
@@ -34,8 +34,6 @@ window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" '• 
 
 maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-expanded-icon" '󰊓 ')
 show_maximized_icon_for_all_tabs=$(get_tmux_option "@tmux-dotbar-show-maximized-icon-for-all-tabs" false)
-
-# TODO: add an option to set the status-right
 
 tmux set-option -g status-position "$status"
 tmux set-option -g status-style "bg=${bg},fg=${fg}"
