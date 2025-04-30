@@ -56,3 +56,5 @@ setw -g pane-base-index 1
 set-option -g renumber-windows on
 ```
 
+### Credits
+This theme was inspired on [minimal-tmux-status](https://github.com/niksingh710/minimal-tmux-status/tree/main).
