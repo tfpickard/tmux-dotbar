@@ -27,6 +27,9 @@ justify=$(get_tmux_option "@tmux-dotbar-justify" "absolute-centre")
 left_state=$(get_tmux_option "@tmux-dotbar-left" true)
 status_left=$("$left_state" && get_tmux_option "@tmux-dotbar-status-left" "#[bg=$bg,fg=$fg_session]#{?client_prefix,, #S }#[bg=$fg_prefix,fg=$bg,bold]#{?client_prefix, #S ,}#[bg=$bg,fg=${fg_session}]")
 
+right_state=$(get_tmux_option "@tmux-dotbar-right" false)
+status_right=$("$right_state" && get_tmux_option "@tmux-dotbar-status-right" "#[bg=$bg,fg=$fg_session] %H:%M #[bg=$bg,fg=${fg_session}]")
+
 window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" '• #W ')
 
 maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-expanded-icon" '󰊓 ')
@@ -39,7 +42,7 @@ tmux set-option -g status-style "bg=${bg},fg=${fg}"
 tmux set-option -g status-justify "$justify"
 
 tmux set-option -g status-left "$status_left"
-tmux set-option -g status-right ""
+tmux set-option -g status-right "$status_right"
 
 tmux set-option -g window-status-style "bg=${bg},fg=${fg}"
 tmux set-option -g window-status-format "$window_status_format"
