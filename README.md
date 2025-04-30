@@ -60,6 +60,14 @@ set -g @tmux-dotbar-fg-session "#9399b2"
 set -g @tmux-dotbar-fg-prefix "#cba6f7"
 ```
 
+### Status bar
+You may feel the right part a bit empty. If you want, there's an option to display the current time there, you can enable it (disabled by default) in your `.tmux.conf`:
+```
+set -g @tmux-dotbar-right true
+```
+If you want to change it completely, you can, just modify the variable `tmux-dotbar-status-right` accordingly.  
+There's a variable for each part of the statusbar, you can reference it by looking at the `dotbar.tmux` in the repository.
+
 ## Recommended tmux options
 Since this theme does not display window indexes, it's best suited for users who manage a small number of windows.  
 To improve usability, it's hugely recommended to enable automatic renumbering when windows are closed.  
