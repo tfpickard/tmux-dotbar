@@ -43,9 +43,9 @@ The session name is changed when the prefix key is pressed. <br>
 3. Reload Tmux by either restarting or reloading with `tmux source ~/.tmux.conf`.
 
 ## Recommended tmux options
-Since this theme does not show the index of the windows, it's recommended for users that doesn't use a lot of windows.  
-A good option is to set index numbers to start at 1, as it's easier to know which index refers to each window.
-As well to renumber the windows when some of them are closed.
+Since this theme does not display window indexes, it's best suited for users who manage a small number of windows.  
+To improve usability, consider starting window indexes at 1 for easier tracking.
+It's also recommended to enable automatic renumbering when windows are closed.
 
 ```
 set -g base-index 1
