@@ -47,9 +47,10 @@ tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
 </details>
 
 ## Option reference
-This theme works best depending on the colorscheme you use.
-The default colorscheme used for this theme is [neovim-ayu](https://github.com/Shatur/neovim-ayu), so it matches the background for my tmux, terminal and vim colors.  
-If you want to change to match your colorscheme, you can get the colors and change/set these options:
+### Colorscheme
+This theme works best depending on the colorscheme you use, because the status-bar background is supposed to mix with the terminal background.
+The default colorscheme used for this theme (as in the preview images) is [neovim-ayu](https://github.com/Shatur/neovim-ayu), so it matches the background for my tmux, terminal and vim colors.  
+If you want to match your colorscheme (recommended), you can get the colors from the theme palette and change/set these options:
 ```
 # supposing you use catppuccin moccha
 set -g @tmux-dotbar-bg "#1e1e2e"
