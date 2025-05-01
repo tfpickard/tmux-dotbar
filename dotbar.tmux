@@ -30,7 +30,8 @@ status_left=$("$left_state" && get_tmux_option "@tmux-dotbar-status-left" "#[bg=
 right_state=$(get_tmux_option "@tmux-dotbar-right" false)
 status_right=$("$right_state" && get_tmux_option "@tmux-dotbar-status-right" "#[bg=$bg,fg=$fg_session] %H:%M #[bg=$bg,fg=${fg_session}]")
 
-window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" '• #W ')
+window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" '#W')
+window_status_separator=$(get_tmux_option "@tmux-dotbar-window-status-separator" '  •  ')
 
 maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-maximized-icon" '󰊓 ')
 show_maximized_icon_for_all_tabs=$(get_tmux_option "@tmux-dotbar-show-maximized-icon-for-all-tabs" false)
@@ -41,6 +42,8 @@ tmux set-option -g status-justify "$justify"
 
 tmux set-option -g status-left "$status_left"
 tmux set-option -g status-right "$status_right"
+
+tmux set-window-option -g window-status-separator "$window_status_separator"
 
 tmux set-option -g window-status-style "bg=${bg},fg=${fg}"
 tmux set-option -g window-status-format "$window_status_format"
