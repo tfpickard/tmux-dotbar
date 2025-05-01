@@ -46,7 +46,7 @@ tmux dotbar is a simple and minimalist status bar theme for tmux. <br>
 
 </details>
 
-## Option reference
+## Configuration
 ### Colorscheme
 This theme works best depending on the colorscheme you use, because the status-bar background is supposed to mix with the terminal background.
 The default colorscheme used for this theme (as in the preview images) is [neovim-ayu](https://github.com/Shatur/neovim-ayu), so it matches the background for my tmux, terminal and vim colors.  
@@ -71,7 +71,25 @@ Another option you might want to try is to change the position of the status-bar
 set -g @tmux-dotbar-position top
 ```
 
-There's a variable for each part of the statusbar, you can reference it by looking at the `dotbar.tmux` in the repository.
+### All options
+Below are all the options you can change. The values are random and you should choose your own. You can look at `dotbar.tmux` for more reference.
+```
+set -g @tmux-dotbar-fg "#hex-value"
+set -g @tmux-dotbar-bg "#hex-value"
+set -g @tmux-dotbar-fg-current "#hex-value"
+set -g @tmux-dotbar-fg-session "#hex-value"
+set -g @tmux-dotbar-fg-prefix "#hex-value"
+set -g @tmux-dotbar-position "top"
+set -g @tmux-dotbar-justify "centre"
+set -g @tmux-dotbar-left "true"
+set -g @tmux-dotbar-status-left "#S"
+set -g @tmux-dotbar-right "false"
+set -g @tmux-dotbar-status-right "%H:%M"
+set -g @tmux-dotbar-window-status-format "#W"
+set -g @tmux-dotbar-window-status-separator "  |  "
+set -g @tmux-dotbar-maximized-icon "☯︎"
+set -g @tmux-dotbar-show-maximized-icon-for-all-tabs
+```
 
 ## Recommended tmux options
 Since this theme does not display window indexes, it's best suited for users who manage a small number of windows.  
