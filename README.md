@@ -72,23 +72,23 @@ set -g @tmux-dotbar-position top
 ```
 
 ### All options
-Below are all the options you can change. The values are random and you should choose your own. You can look at `dotbar.tmux` for more reference.
+Below are all the options you can change with the default values. You can look at `dotbar.tmux` for more reference.
 ```
-set -g @tmux-dotbar-fg "#hex-value"
-set -g @tmux-dotbar-bg "#hex-value"
-set -g @tmux-dotbar-fg-current "#hex-value"
-set -g @tmux-dotbar-fg-session "#hex-value"
-set -g @tmux-dotbar-fg-prefix "#hex-value"
-set -g @tmux-dotbar-position "top"
-set -g @tmux-dotbar-justify "centre"
+set -g @tmux-dotbar-fg "#0B0E14"
+set -g @tmux-dotbar-bg "#475266"
+set -g @tmux-dotbar-fg-current "#BFBDB6"
+set -g @tmux-dotbar-fg-session "#565B66"
+set -g @tmux-dotbar-fg-prefix "#95E6CB"
+set -g @tmux-dotbar-position "bottom"
+set -g @tmux-dotbar-justify "absolute-centre"
 set -g @tmux-dotbar-left "true"
-set -g @tmux-dotbar-status-left "#S"
+set -g @tmux-dotbar-status-left "#S" # see code
 set -g @tmux-dotbar-right "false"
-set -g @tmux-dotbar-status-right "%H:%M"
-set -g @tmux-dotbar-window-status-format "#W"
-set -g @tmux-dotbar-window-status-separator "  |  "
-set -g @tmux-dotbar-maximized-icon "☯︎"
-set -g @tmux-dotbar-show-maximized-icon-for-all-tabs
+set -g @tmux-dotbar-status-right "%H:%M" # see code
+set -g @tmux-dotbar-window-status-format " #W "
+set -g @tmux-dotbar-window-status-separator " • "
+set -g @tmux-dotbar-maximized-icon "󰊓"
+set -g @tmux-dotbar-show-maximized-icon-for-all-tabs false
 ```
 
 ## Recommended tmux options
