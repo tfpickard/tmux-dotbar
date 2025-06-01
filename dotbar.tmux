@@ -38,7 +38,6 @@ maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-maximized-icon" '󰊓')
 show_maximized_icon_for_all_tabs=$(get_tmux_option "@tmux-dotbar-show-maximized-icon-for-all-tabs" false)
 
 tmux set-option -g status-position "$status"
-tmyx set-option -g status-style "bg=#{?client_remote_host,${sshbg},${bg},fg=${fg}"
 
 # tmux set-option -g status-style "bg=${bg},fg=${fg}"
 tmux set-option -g status-justify "$justify"
@@ -53,3 +52,5 @@ tmux set-option -g window-status-format "$window_status_format"
 "$show_maximized_icon_for_all_tabs" && tmux set-option -g window-status-format "${window_status_format}#{?window_zoomed_flag,${maximized_pane_icon},}"
 
 tmux set-option -g window-status-current-format "#[bg=${bg},fg=${fg_current}]${window_status_format}#[fg=#39BAE6,bg=${bg}]#{?window_zoomed_flag,${maximized_pane_icon},}#[fg=${bg},bg=default]"
+tmux set-option -g status-left "#{?client_remote_host,#[fg=colour196]🔒 SSH #[default],#[fg=colour40]LOCAL #[default]} "
+tmux set-option -g status-style "bg=#{?client_remote_host,${sshbg},${bg},fg=${fg}"
