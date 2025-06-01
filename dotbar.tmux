@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
 
 get_tmux_option() {
-  local option=$1
-  local default_value="$2"
+    local option=$1
+    local default_value="$2"
 
-  local option_value
-  option_value=$(tmux show-options -gqv "$option")
+    local option_value
+    option_value=$(tmux show-options -gqv "$option")
 
-  if [ "$option_value" != "" ]; then
-    echo "$option_value"
-    return
-  fi
-  echo "$default_value"
+    if [ "$option_value" != "" ]; then
+        echo "$option_value"
+        return
+    fi
+    echo "$default_value"
 }
 
 # colors
 bg=$(get_tmux_option "@tmux-dotbar-bg" '#0B0E14')
+sshbg=$(get_tmux_option "@tmux-dotbar-ssh-bg" '#5B0E64')
 fg=$(get_tmux_option "@tmux-dotbar-fg" '#475266')
 fg_current=$(get_tmux_option "@tmux-dotbar-fg-current" '#BFBDB6')
 fg_session=$(get_tmux_option "@tmux-dotbar-fg-session" '#565B66')
@@ -37,7 +38,9 @@ maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-maximized-icon" '󰊓')
 show_maximized_icon_for_all_tabs=$(get_tmux_option "@tmux-dotbar-show-maximized-icon-for-all-tabs" false)
 
 tmux set-option -g status-position "$status"
-tmux set-option -g status-style "bg=${bg},fg=${fg}"
+tmyx set-option -g status-style "bg=#{?client_remote_host,${sshbg},${bg},fg=${fg}"
+
+# tmux set-option -g status-style "bg=${bg},fg=${fg}"
 tmux set-option -g status-justify "$justify"
 
 tmux set-option -g status-left "$status_left"
